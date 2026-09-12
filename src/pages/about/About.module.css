@@ -1,0 +1,107 @@
+.container {
+  max-w: 800px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.bio {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.75;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 32px;
+  letter-spacing: -0.3px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timelineItem {
+  position: relative;
+  border-left: 2px solid #000000;
+  padding-left: 24px;
+  padding-bottom: 8px;
+}
+
+.timelineMarker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  left: -6px;
+  top: 6px;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.roleTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.durationBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 4px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+.companyName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.highlightsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlightRow {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 14px;
+}
+
+.highlightRow::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #9ca3af;
+}
