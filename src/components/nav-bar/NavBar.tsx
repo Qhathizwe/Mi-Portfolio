@@ -5,7 +5,7 @@ import styles from './Navbar.module.css';
 export const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
-      <Link to="/" className={styles.logo}>SP.</Link>
+      <Link to="/" className={styles.logo}>Phoswa-The-Great</Link>
       <div className={styles.navLinks}>
         <Link to="/" className={styles.link}>HOME</Link>
         <Link to="/about" className={styles.link}>ABOUT</Link>
