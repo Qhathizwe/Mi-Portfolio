@@ -1,0 +1,83 @@
+.footerContainer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 48px 24px 48px;
+  width: 100%;
+  margin-top: auto; /* Pushes footer to the absolute bottom of short pages */
+}
+
+.gridWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 768px) {
+  .gridWrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brandTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.brandText {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.linksColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionHeader {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.footerLink:hover {
+  color: #ffffff;
+}
+
+.copyrightBar {
+  max-width: 1100px;
+  margin: 48px auto 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid #1f2937;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #4b5563;
+  letter-spacing: 0.3px;
+}
