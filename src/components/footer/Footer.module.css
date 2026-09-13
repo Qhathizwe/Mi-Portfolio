@@ -1,83 +1,130 @@
-.footerContainer {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 60px 48px 24px 48px;
-  width: 100%;
-  margin-top: auto; /* Pushes footer to the absolute bottom of short pages */
+/* src/components/footer/Footer.module.css */
+
+.footer {
+  border-top: 1px solid #1e293b;
+
+  background: #060910;
+
+  margin-top: 50px;
 }
 
-.gridWrapper {
-  max-width: 1100px;
+.container {
+  max-width: 1200px;
+
   margin: 0 auto;
+
+  padding: 50px 24px;
+
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 48px;
+
+  grid-template-columns:
+    1.5fr 1fr 1fr;
+
+  gap: 40px;
+
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  .gridWrapper {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-.brandColumn {
+.brand {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+
+  align-items: center;
+
+  gap: 13px;
 }
 
-.brandTitle {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.2px;
-}
+.logo {
+  width: 42px;
+  height: 42px;
 
-.brandText {
-  font-size: 0.85rem;
-  color: #9ca3af;
-  line-height: 1.6;
-  max-width: 320px;
-}
-
-.linksColumn {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #00d9ff,
+      #7c3aed
+    );
+
+  color: white;
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
 }
 
-.sectionHeader {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #6b7280;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
+.brand h3 {
+  color: #f8fafc;
+
+  font-size: 1rem;
 }
 
-.linkList {
+.brand p {
+  color: #64748b;
+
+  font-size: 0.78rem;
+}
+
+.links,
+.social {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
 }
 
-.footerLink {
-  font-size: 0.85rem;
-  color: #d1d5db;
+.links a,
+.social a {
+  color: #94a3b8;
+
+  font-size: 0.82rem;
+
   transition: color 0.2s ease;
-  width: fit-content;
 }
 
-.footerLink:hover {
-  color: #ffffff;
+.links a:hover,
+.social a:hover {
+  color: #00d9ff;
 }
 
-.copyrightBar {
-  max-width: 1100px;
-  margin: 48px auto 0 auto;
-  padding-top: 24px;
-  border-top: 1px solid #1f2937;
-  text-align: center;
-  font-size: 0.75rem;
-  color: #4b5563;
-  letter-spacing: 0.3px;
+.bottom {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 18px 24px;
+
+  border-top: 1px solid #1e293b;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #475569;
+
+  font-size: 0.72rem;
+}
+
+@media (max-width: 700px) {
+
+  .container {
+    grid-template-columns: 1fr;
+
+    padding: 40px 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+
+    padding: 18px 20px;
+  }
+
 }

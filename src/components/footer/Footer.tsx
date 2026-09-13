@@ -1,49 +1,93 @@
+// src/components/footer/Footer.tsx
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 export const Footer: React.FC = () => {
+
   return (
-    <footer className={styles.footerContainer}>
-      <div className={styles.gridWrapper}>
-        <div className={styles.brandColumn}>
-          <h3 className={styles.brandTitle}>Scelo Phoswa</h3>
-          <p className={styles.brandText}>
-            Building elegant frontend components and secure full-stack software applications.
-          </p>
+    <footer className={styles.footer}>
+
+      <div className={styles.container}>
+
+        <div className={styles.brand}>
+
+          <div className={styles.logo}>
+            SM
+          </div>
+
+          <div>
+
+            <h3>
+              Scelo Mike Phoswa
+            </h3>
+
+            <p>
+              Junior Full-Stack Developer
+            </p>
+
+          </div>
+
         </div>
 
-        <div className={styles.linksColumn}>
-          <h4 className={styles.sectionHeader}>QUICK LINKS</h4>
-          <div className={styles.linkList}>
-            <Link to="/" className={styles.footerLink}>Home</Link>
-            <Link to="/about" className={styles.footerLink}>About Path</Link>
-            <Link to="/projects" className={styles.footerLink}>Applications</Link>
-            <Link to="/contact" className={styles.footerLink}>Contact Info</Link>
-          </div>
+
+        <div className={styles.links}>
+
+          <Link to="/">
+            Home
+          </Link>
+
+          <Link to="/about">
+            About
+          </Link>
+
+          <Link to="/projects">
+            Projects
+          </Link>
+
+          <Link to="/contact">
+            Contact
+          </Link>
+
         </div>
 
-        <div className={styles.linksColumn}>
-          <h4 className={styles.sectionHeader}>CHANNELS</h4>
-          <div className={styles.linkList}>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className={styles.footerLink}
-            >
-              🐱 GitHub Profile
-            </a>
-            <a href="#" className={styles.footerLink}>
-              💼 LinkedIn Profile
-            </a>
-          </div>
+
+        <div className={styles.social}>
+
+          <a
+            href="https://github.com/Qhathizwe"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a href="mailto:sphoswa2@gmail.com">
+            Email
+          </a>
+
         </div>
+
       </div>
 
-      <div className={styles.copyrightBar}>
-        &copy; {new Date().getFullYear()} Scelo Mike Phoswa. All rights reserved.
+
+      <div className={styles.bottom}>
+
+        <p>
+          © {new Date().getFullYear()}
+          {' '}
+          Scelo Mike Phoswa. All rights reserved.
+        </p>
+
+        <p>
+          Built with React + TypeScript
+        </p>
+
       </div>
+
     </footer>
   );
 };
+
+export default Footer;
