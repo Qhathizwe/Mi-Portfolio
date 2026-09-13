@@ -1,107 +1,229 @@
-.container {
-  max-w: 800px;
+/* src/pages/about/About.module.css */
+
+.page {
+  min-height: 100vh;
+}
+
+.aboutSection,
+.skillsSection {
+  max-width: 1200px;
+
   margin: 0 auto;
-  padding: 60px 24px;
+
+  padding: 100px 24px;
 }
 
-.title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 16px;
+.heading {
+  max-width: 800px;
+
+  margin-bottom: 60px;
 }
 
-.bio {
-  font-size: 1.05rem;
-  color: #4b5563;
-  line-height: 1.75;
-  margin-bottom: 48px;
-}
+.heading > span,
+.sectionHeading > span {
+  color: #00d9ff;
 
-.sectionTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 32px;
-  letter-spacing: -0.3px;
-  border-bottom: 1px solid #eaeaea;
-  padding-bottom: 8px;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.timelineItem {
-  position: relative;
-  border-left: 2px solid #000000;
-  padding-left: 24px;
-  padding-bottom: 8px;
-}
-
-.timelineMarker {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #000000;
-  border-radius: 50%;
-  left: -6px;
-  top: 6px;
-}
-
-.itemHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 4px;
-}
-
-.roleTitle {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #111111;
-}
-
-.durationBadge {
   font-size: 0.75rem;
-  font-weight: 600;
-  background-color: #f3f4f6;
-  color: #4b5563;
-  padding: 4px 12px;
-  border-radius: 6px;
-  letter-spacing: 0.3px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
 }
 
-.companyName {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #6b7280;
-  margin-bottom: 12px;
+.heading h1,
+.sectionHeading h2 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+
+  line-height: 1.05;
+
+  margin: 15px 0;
+
+  color: #f8fafc;
 }
 
-.highlightsList {
-  list-style: none;
+.heading h1 strong,
+.sectionHeading h2 strong {
+  color: #00d9ff;
+
+  font-weight: inherit;
+}
+
+.heading p {
+  color: #94a3b8;
+
+  max-width: 650px;
+
+  line-height: 1.8;
+}
+
+.contentGrid {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 25px;
+}
+
+.storyCard,
+.factsCard {
+  background: #111827;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 16px;
+
+  padding: 35px;
+}
+
+.storyCard h2,
+.factsCard h2 {
+  color: #f8fafc;
+
+  margin-bottom: 20px;
+}
+
+.storyCard p {
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.factsCard {
   display: flex;
+
   flex-direction: column;
+}
+
+.fact {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+.fact:last-child {
+  border-bottom: none;
+}
+
+.fact span {
+  color: #64748b;
+
+  font-size: 0.85rem;
+}
+
+.fact strong {
+  color: #cbd5e1;
+
+  font-size: 0.85rem;
+
+  text-align: right;
+}
+
+.skillsSection {
+  border-top: 1px solid rgba(30, 41, 59, 0.6);
+}
+
+.sectionHeading {
+  margin-bottom: 45px;
+}
+
+.skillsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.skillCard {
+  background: #111827;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 15px;
+
+  padding: 25px;
+
+  transition: 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+
+  border-color: #00d9ff;
+}
+
+.skillCard h3 {
+  color: #f8fafc;
+
+  margin-bottom: 18px;
+}
+
+.skillList {
+  display: flex;
+
+  flex-wrap: wrap;
+
   gap: 8px;
 }
 
-.highlightRow {
-  font-size: 0.9rem;
-  color: #4b5563;
-  line-height: 1.5;
-  position: relative;
-  padding-left: 14px;
+.skillList span {
+  padding: 7px 10px;
+
+  background: rgba(0, 217, 255, 0.06);
+
+  border: 1px solid rgba(0, 217, 255, 0.15);
+
+  border-radius: 6px;
+
+  color: #cbd5e1;
+
+  font-size: 0.75rem;
 }
 
-.highlightRow::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: #9ca3af;
+@media (max-width: 850px) {
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .aboutSection,
+  .skillsSection {
+    padding: 70px 20px;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyCard,
+  .factsCard {
+    padding: 25px;
+  }
+
+  .fact {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .fact strong {
+    text-align: left;
+  }
+
 }
