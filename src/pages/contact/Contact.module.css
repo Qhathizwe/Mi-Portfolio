@@ -1,88 +1,227 @@
-.layoutContainer {
-  max-w: 1000px;
+/* src/pages/contact/Contact.module.css */
+
+.page {
+  min-height: 100vh;
+}
+
+.contactSection {
+  max-width: 1200px;
+
   margin: 0 auto;
-  padding: 60px 24px;
+
+  padding: 100px 24px;
+}
+
+.heading {
+  max-width: 750px;
+
+  margin-bottom: 60px;
+}
+
+.heading > span {
+  color: #00d9ff;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.heading h1 {
+  color: #f8fafc;
+
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+
+  line-height: 1.05;
+
+  margin: 15px 0;
+}
+
+.heading h1 strong {
+  color: #00d9ff;
+
+  font-weight: inherit;
+}
+
+.heading p {
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  max-width: 650px;
+}
+
+.contactGrid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 64px;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 25px;
 }
-@media (max-width: 768px) {
-  .layoutContainer { grid-template-columns: 1fr; gap: 40px; }
+
+.infoCard,
+.messageCard {
+  background: #111827;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 17px;
+
+  padding: 35px;
 }
-.title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 32px;
+
+.infoCard h2,
+.messageCard h2 {
+  color: #f8fafc;
+
+  margin-bottom: 12px;
 }
-.contactForm {
+
+.infoCard > p {
+  color: #94a3b8;
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}
+
+.contactItem {
+  padding: 18px 0;
+
+  border-bottom: 1px solid #1e293b;
+}
+
+.contactItem:last-child {
+  border-bottom: none;
+}
+
+.contactItem span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 0.75rem;
+
+  margin-bottom: 5px;
+}
+
+.contactItem a {
+  color: #cbd5e1;
+
+  font-size: 0.9rem;
+
+  transition: color 0.2s ease;
+}
+
+.contactItem a:hover {
+  color: #00d9ff;
+}
+
+.messageCard form {
   display: flex;
+
   flex-direction: column;
-  gap: 20px;
+
+  gap: 18px;
 }
+
 .inputGroup {
   display: flex;
+
   flex-direction: column;
-  gap: 8px;
+
+  gap: 7px;
 }
-.label {
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #4b5563;
-  letter-spacing: 1px;
-}
-.field, .textarea {
-  width: 100%;
-  padding: 12px 16px;
-  font-size: 0.9rem;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  background-color: #ffffff;
-  font-family: inherit;
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-.field:focus, .textarea:focus {
-  border-color: #000000;
-}
-.textarea { resize: none; }
-.submitBtn {
-  align-self: flex-start;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 12px 28px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.channelsColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-}
-.channelsTitle {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #9ca3af;
-  letter-spacing: 1.5px;
-  margin-bottom: 8px;
-}
-.channelLink {
-  display: block;
-  padding: 16px;
-  border: 1px solid #e5e7eb;
-  background-color: #ffffff;
-  border-radius: 12px;
-  font-size: 0.9rem;
+
+.inputGroup label {
+  color: #cbd5e1;
+
+  font-size: 0.8rem;
+
   font-weight: 600;
-  transition: border-color 0.2s ease;
 }
-.channelLink:hover {
-  border-color: #000000;
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  background: #0f172a;
+
+  border: 1px solid #1e293b;
+
+  border-radius: 8px;
+
+  color: #f8fafc;
+
+  outline: none;
+
+  resize: vertical;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: #00d9ff;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 217, 255, 0.06);
+}
+
+.inputGroup input::placeholder,
+.inputGroup textarea::placeholder {
+  color: #475569;
+}
+
+.messageCard button {
+  align-self: flex-start;
+
+  padding: 13px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #00d9ff;
+
+  color: #061018;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.messageCard button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 217, 255, 0.18);
+}
+
+@media (max-width: 800px) {
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .contactSection {
+    padding: 70px 20px;
+  }
+
+  .infoCard,
+  .messageCard {
+    padding: 25px;
+  }
+
 }
