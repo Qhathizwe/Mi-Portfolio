@@ -3,6 +3,7 @@ import { experienceData } from '../../data/PortfolioData';
 import styles from './About.module.css';
 
 export const About: React.FC = () => {
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>About Me</h2>
