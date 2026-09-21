@@ -60,8 +60,8 @@ export const About: React.FC = () => {
             <h2>Quick Facts</h2>
 
             <div className={styles.fact}>
-              <span>Location</span>
-              <strong>South Africa</strong>
+              <span>Location </span>
+              <strong>KwaZulu Natal - Pietermaritzburg</strong>
             </div>
 
             <div className={styles.fact}>
@@ -144,7 +144,7 @@ export const About: React.FC = () => {
               'Software Support',
               'Troubleshooting',
               'System Configuration',
-              'Networking'
+              
             ]}
           />
 
