@@ -25,7 +25,8 @@ const projects: Project[] = [
       'Vite'
     ],
 
-    type: 'Web Application'
+    type: 'Web Application',
+    github: 'https://github.com/Qhathizwe/Mi-Shoping-list-app.git',
   },
 
   {
@@ -60,7 +61,8 @@ const projects: Project[] = [
       'CSS'
     ],
 
-    type: 'Portfolio'
+    type: 'Portfolio',
+    github: 'https://github.com/Qhathizwe/Mi-Portfolio.git'
   }
 
 ];
