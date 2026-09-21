@@ -1,3 +1,4 @@
+<img src="https://socialify.git.ci/Qhathizwe/Mi-Portfolio/image?language=1&name=1&owner=1&stargazers=1&theme=Auto" alt="Mi-Portfolio" width="640" height="320" />
 # Scelo Mike Phoswa
 
 ## Junior Full-Stack Developer
